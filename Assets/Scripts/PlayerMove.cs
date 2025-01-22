@@ -33,5 +33,15 @@ public class PlayerMove : MonoBehaviour
             other.gameObject.SetActive(false);
             GameManager.instance.gasScore += 30;
         }
+
+        
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            GameManager.instance.GameLose();
+        }
     }
 }

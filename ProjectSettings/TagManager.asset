@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Despawn
   - Gas
+  - Wall
   layers:
   - Default
   - TransparentFX

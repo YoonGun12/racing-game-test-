@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Despawn
+  - Gas
   layers:
   - Default
   - TransparentFX

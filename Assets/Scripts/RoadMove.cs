@@ -14,7 +14,14 @@ public class RoadMove : MonoBehaviour
 
         if (transform.position.z <= -21.5f)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 21.5f);
+            if (gameObject.CompareTag("Gas"))
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, 21.5f);
+            }
         }
     }
 

@@ -25,4 +25,13 @@ public class PlayerMove : MonoBehaviour
         Vector3 moveVec = new Vector3(h, 0, v);
         rigid.velocity = moveVec * moveSpeed;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Gas"))
+        {
+            other.gameObject.SetActive(false);
+            GameManager.instance.gasScore += 50;
+        }
+    }
 }

@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int gasScore;
+    [SerializeField]private Text gasScoreText;
 
     private void Awake()
     {
@@ -22,6 +24,18 @@ public class GameManager : MonoBehaviour
     {
         gasScore = 100;
         StartCoroutine(GasDecrease());
+    }
+
+    private void Update()
+    {
+        if (gasScore <= 0)
+            GameLose();
+        gasScoreText.text = "Gas : " + gasScore;
+    }
+
+    private void GameLose()
+    {
+        
     }
 
     IEnumerator GasDecrease()

@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
         if (other.CompareTag("Gas"))
         {
             other.gameObject.SetActive(false);
-            GameManager.instance.gasScore += 50;
+            GameManager.instance.gasScore += 30;
         }
     }
 }

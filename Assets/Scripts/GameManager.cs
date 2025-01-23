@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             gasScore -= 10;
-            Debug.Log(gasScore);
         }
     }
 

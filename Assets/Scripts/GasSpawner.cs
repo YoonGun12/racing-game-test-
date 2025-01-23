@@ -9,7 +9,7 @@ public class GasSpawner : MonoBehaviour
     public BoxCollider gasSpawnPoint;
     public GameObject gasPrefab;
     private float timer = 0;
-    private float gasSpawnTime = 3f;
+    private float gasSpawnTime = 0.5f;
 
 
     private void Update()
